@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace BookStore.Enums
 {
-    internal class Cover
+    public enum Cover
     {
+        Soft,
+        Solid,
+        Flexible
     }
 }

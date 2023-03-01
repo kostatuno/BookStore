@@ -9,7 +9,10 @@ namespace BookStore.Web
 
             app.MapGet("/", () => "Hello World!");
 
-            app.Run();
+            app.RunAsync();
+            //app.StartAsync();
+            Task.Delay(1000);
+            app.StopAsync();
         }
     }
 }

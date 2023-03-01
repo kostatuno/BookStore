@@ -1,0 +1,5 @@
+D:\PROJECTS_IN_WORK\Bookstore\BookStore\obj\Debug\net6.0\BookStore.csproj.AssemblyReference.cache
+D:\PROJECTS_IN_WORK\Bookstore\BookStore\obj\Debug\net6.0\BookStore.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECTS_IN_WORK\Bookstore\BookStore\obj\Debug\net6.0\BookStore.AssemblyInfoInputs.cache
+D:\PROJECTS_IN_WORK\Bookstore\BookStore\obj\Debug\net6.0\BookStore.AssemblyInfo.cs
+D:\PROJECTS_IN_WORK\Bookstore\BookStore\obj\Debug\net6.0\BookStore.csproj.CoreCompileInputs.cache

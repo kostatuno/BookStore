@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace BookStore.Enums
 {
-    internal class Language
+    public enum Language
     {
+        Ukrainian,
+        English,
+        French,
+        Russian,
+        Polish
     }
 }
