@@ -1,18 +1,19 @@
-﻿using Shop.Data.Models;
+﻿using BookStore.Entities;
+using Shop.Data.Models;
 using System.Collections.Generic;
 
 namespace Shop.Data
 {
-    public interface IFood
+    public interface IBook
     {
-        IEnumerable<Food> GetAll();
-        IEnumerable<Food> GetPreferred(int count);
-        IEnumerable<Food> GetFoodsByCategoryId(int categoryId);
-        IEnumerable<Food> GetFilteredFoods(int id, string searchQuery);
-        IEnumerable<Food> GetFilteredFoods(string searchQuery);
+        IEnumerable<Book> GetAll();
+        IEnumerable<Book> GetPreferred(int count);
+        IEnumerable<Book> GetBookByCategoryId(int categoryId);
+        IEnumerable<Book> GetFilteredBook(int id, string searchQuery);
+        IEnumerable<Book> GetFilteredBook(string searchQuery);
         Food GetById(int id);
-        void NewFood(Food food);
-        void EditFood(Food food);
-        void DeleteFood(int id);
+        void NewBook(Book book);
+        void EditBook(Book book);
+        void DeleteBook(int id);
     }
 }
