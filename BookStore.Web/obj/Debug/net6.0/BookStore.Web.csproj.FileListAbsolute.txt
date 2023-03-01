@@ -24,3 +24,6 @@ D:\PROJECTS_IN_WORK\Bookstore\BookStore.Web\obj\Debug\net6.0\refint\BookStore.We
 D:\PROJECTS_IN_WORK\Bookstore\BookStore.Web\obj\Debug\net6.0\BookStore.Web.pdb
 D:\PROJECTS_IN_WORK\Bookstore\BookStore.Web\obj\Debug\net6.0\BookStore.Web.genruntimeconfig.cache
 D:\PROJECTS_IN_WORK\Bookstore\BookStore.Web\obj\Debug\net6.0\ref\BookStore.Web.dll
+D:\PROJECTS_IN_WORK\Bookstore\BookStore.Web\bin\Debug\net6.0\IMG_20191127_130034.jpg
+D:\PROJECTS_IN_WORK\Bookstore\BookStore.Web\obj\Debug\net6.0\BookStore.Web.RazorAssemblyInfo.cache
+D:\PROJECTS_IN_WORK\Bookstore\BookStore.Web\obj\Debug\net6.0\BookStore.Web.RazorAssemblyInfo.cs
