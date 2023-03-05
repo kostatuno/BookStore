@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6YqpPCp/S5LvelXknoVnfmZoI5RkNLS8hSGoehBNSi45Fd0lTNsrR779WBAB14qPj7kaKeSqtbbz8/ezctEvEg==",
+  "dgSpecHash": "CbzcmNoHR1QXFqB9h40ZORpwdnvf86pHB7hUW2rFpIKjXvfrPe24Kh39nFg7Nv8lxtKrARjIX1FoDiVWKuAzWQ==",
   "success": true,
   "projectFilePath": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.Persistence\\BookStore.Persistence.csproj",
   "expectedPackageFiles": [

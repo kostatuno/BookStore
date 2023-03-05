@@ -10,3 +10,5 @@ D:\PROJECTS_IN_WORK\BookStore\BookStore.Backend\BookStore.Domain\obj\Debug\net6.
 D:\PROJECTS_IN_WORK\BookStore\BookStore.Backend\BookStore.Domain\obj\Debug\net6.0\refint\BookStore.Domain.dll
 D:\PROJECTS_IN_WORK\BookStore\BookStore.Backend\BookStore.Domain\obj\Debug\net6.0\BookStore.Domain.pdb
 D:\PROJECTS_IN_WORK\BookStore\BookStore.Backend\BookStore.Domain\obj\Debug\net6.0\ref\BookStore.Domain.dll
+D:\PROJECTS_IN_WORK\BookStore\BookStore.Backend\BookStore.Domain\bin\Debug\net6.0\BookStore.Domain.runtimeconfig.json
+D:\PROJECTS_IN_WORK\BookStore\BookStore.Backend\BookStore.Domain\obj\Debug\net6.0\BookStore.Domain.genruntimeconfig.cache

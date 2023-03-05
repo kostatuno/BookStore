@@ -1160,8 +1160,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "BookStore.Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "7.0.3"
+          "BookStore.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/BookStore.Application.dll": {}
@@ -1173,6 +1172,9 @@
       "BookStore.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.3"
+        },
         "compile": {
           "bin/placeholder/BookStore.Domain.dll": {}
         },
