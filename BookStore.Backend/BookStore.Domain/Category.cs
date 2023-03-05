@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Shop.Data.Models
+namespace BookStore.Domain
 {
     public class Category
     {
@@ -8,6 +8,6 @@ namespace Shop.Data.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
-        public IEnumerable<Food> Foods { get; set; }
+        public IEnumerable<Book> Books { get; set; }
     }
 }
