@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BookStore.Backend"
   ],
+  "SelectedNode": "\\BookStore.Backend\\Core",
   "PreviewInSolutionExplorer": false
 }
