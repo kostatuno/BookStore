@@ -12,13 +12,13 @@ namespace BookStore.Persistence
 {
     public class BookStoreDbContext : DbContext, IBookStoreDbContext
     {
-        public DbSet<ApplicationUser> Users { get; set; }
+        public DbSet<ApplicationUser> Users { get; set; } = null!;
         public DbSet<Book> Books { get; set; } = null!;
         public DbSet<Order> Orders { get; set; } = null!;
-        public DbSet<OrderDetail> OrderDetails { get; set; }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<CartItem> CartItems { get; set; }
-        public DbSet<Cart> Cart { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; } = null!;
+        public DbSet<Category> Categories { get; set; } = null!;
+        public DbSet<CartItem> CartItems { get; set; } = null!;
+        public DbSet<Cart> Cart { get; set; } = null!;
 
         public BookStoreDbContext()
         {

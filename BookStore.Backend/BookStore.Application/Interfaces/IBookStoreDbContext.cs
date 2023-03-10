@@ -10,6 +10,12 @@ namespace BookStore.Application.Interfaces
 {
     public interface IBookStoreDbContext
     {
-        DbSet<Book> Books { get; set; }
+        public DbSet<ApplicationUser> Users { get; set; }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }
+        public DbSet<Cart> Cart { get; set; }
     }
 }

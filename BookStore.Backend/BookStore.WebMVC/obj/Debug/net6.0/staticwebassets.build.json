@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "Nogu/ankzcpC4Z0QvhBZru/EMi+/BpoWpkd5djvxcIo=",
+  "Source": "BookStore.WebMVC",
+  "BasePath": "_content/BookStore.WebMVC",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "BookStore.WebMVC\\wwwroot",
+      "Source": "BookStore.WebMVC",
+      "ContentRoot": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\",
+      "BasePath": "_content/BookStore.WebMVC",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\default.index",
+      "SourceId": "BookStore.WebMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\",
+      "BasePath": "_content/BookStore.WebMVC",
+      "RelativePath": "default.index",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\default.index"
+    }
+  ]
+}
