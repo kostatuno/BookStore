@@ -1,10 +1,10 @@
-﻿using BookStore.Application.Interfaces;
+﻿using BookStore.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BookStore.Application
+namespace BookStore.Core
 {
     public class CartController
     {

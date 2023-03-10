@@ -1047,37 +1047,24 @@
           }
         }
       },
-      "BookStore.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "BookStore.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/BookStore.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BookStore.Application.dll": {}
-        }
-      },
-      "BookStore.Domain/1.0.0": {
+      "BookStore.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.3"
         },
         "compile": {
-          "bin/placeholder/BookStore.Domain.dll": {}
+          "bin/placeholder/BookStore.Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BookStore.Domain.dll": {}
+          "bin/placeholder/BookStore.Core.dll": {}
         }
       },
       "BookStore.Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "BookStore.Application": "1.0.0",
+          "BookStore.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3"
         },
         "compile": {
@@ -3256,15 +3243,10 @@
         "version.txt"
       ]
     },
-    "BookStore.Application/1.0.0": {
+    "BookStore.Core/1.0.0": {
       "type": "project",
-      "path": "../BookStore.Application/BookStore.Application.csproj",
-      "msbuildProject": "../BookStore.Application/BookStore.Application.csproj"
-    },
-    "BookStore.Domain/1.0.0": {
-      "type": "project",
-      "path": "../BookStore.Domain/BookStore.Domain.csproj",
-      "msbuildProject": "../BookStore.Domain/BookStore.Domain.csproj"
+      "path": "../BookStore.Core/BookStore.Core.csproj",
+      "msbuildProject": "../BookStore.Core/BookStore.Core.csproj"
     },
     "BookStore.Persistence/1.0.0": {
       "type": "project",

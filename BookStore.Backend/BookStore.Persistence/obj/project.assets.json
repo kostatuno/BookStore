@@ -1156,30 +1156,17 @@
           }
         }
       },
-      "BookStore.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "BookStore.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/BookStore.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BookStore.Application.dll": {}
-        }
-      },
-      "BookStore.Domain/1.0.0": {
+      "BookStore.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.3"
         },
         "compile": {
-          "bin/placeholder/BookStore.Domain.dll": {}
+          "bin/placeholder/BookStore.Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BookStore.Domain.dll": {}
+          "bin/placeholder/BookStore.Core.dll": {}
         }
       }
     }
@@ -3527,20 +3514,15 @@
         "version.txt"
       ]
     },
-    "BookStore.Application/1.0.0": {
+    "BookStore.Core/1.0.0": {
       "type": "project",
-      "path": "../BookStore.Application/BookStore.Application.csproj",
-      "msbuildProject": "../BookStore.Application/BookStore.Application.csproj"
-    },
-    "BookStore.Domain/1.0.0": {
-      "type": "project",
-      "path": "../BookStore.Domain/BookStore.Domain.csproj",
-      "msbuildProject": "../BookStore.Domain/BookStore.Domain.csproj"
+      "path": "../BookStore.Core/BookStore.Core.csproj",
+      "msbuildProject": "../BookStore.Core/BookStore.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "BookStore.Application >= 1.0.0",
+      "BookStore.Core >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.3"
@@ -3573,8 +3555,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.Application\\BookStore.Application.csproj": {
-              "projectPath": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.Application\\BookStore.Application.csproj"
+            "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.Core\\BookStore.Core.csproj": {
+              "projectPath": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.Core\\BookStore.Core.csproj"
             }
           }
         }
