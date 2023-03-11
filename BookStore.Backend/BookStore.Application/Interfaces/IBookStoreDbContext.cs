@@ -17,5 +17,7 @@ namespace BookStore.Application.Interfaces
         public DbSet<Category> Categories { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<Cart> Cart { get; set; }
+
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken);   
     }
 }

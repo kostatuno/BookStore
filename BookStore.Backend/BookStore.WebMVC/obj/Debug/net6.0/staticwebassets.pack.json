@@ -1,8 +1,20 @@
 {
   "Files": [
     {
-      "Id": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\default.index",
-      "PackagePath": "staticwebassets\\default.index"
+      "Id": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\css\\default.css",
+      "PackagePath": "staticwebassets\\css\\default.css"
+    },
+    {
+      "Id": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\default.html",
+      "PackagePath": "staticwebassets\\default.html"
+    },
+    {
+      "Id": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\img\\background.jpg",
+      "PackagePath": "staticwebassets\\img\\background.jpg"
+    },
+    {
+      "Id": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\img\\bookstore_logo.png",
+      "PackagePath": "staticwebassets\\img\\bookstore_logo.png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.BookStore.WebMVC.Microsoft.AspNetCore.StaticWebAssets.props",

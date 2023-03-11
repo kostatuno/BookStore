@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Nogu/ankzcpC4Z0QvhBZru/EMi+/BpoWpkd5djvxcIo=",
+  "Hash": "8qZwT/7wcOAac0Gc1dbySDGN0+n8bHVsE64RsxaxXfw=",
   "Source": "BookStore.WebMVC",
   "BasePath": "_content/BookStore.WebMVC",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\default.index",
+      "Identity": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\css\\default.css",
       "SourceId": "BookStore.WebMVC",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\",
       "BasePath": "_content/BookStore.WebMVC",
-      "RelativePath": "default.index",
+      "RelativePath": "css/default.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,7 +31,58 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\default.index"
+      "OriginalItemSpec": "wwwroot\\css\\default.css"
+    },
+    {
+      "Identity": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\default.html",
+      "SourceId": "BookStore.WebMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\",
+      "BasePath": "_content/BookStore.WebMVC",
+      "RelativePath": "default.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\default.html"
+    },
+    {
+      "Identity": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\img\\background.jpg",
+      "SourceId": "BookStore.WebMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\",
+      "BasePath": "_content/BookStore.WebMVC",
+      "RelativePath": "img/background.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\background.jpg"
+    },
+    {
+      "Identity": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\img\\bookstore_logo.png",
+      "SourceId": "BookStore.WebMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\",
+      "BasePath": "_content/BookStore.WebMVC",
+      "RelativePath": "img/bookstore_logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\bookstore_logo.png"
     }
   ]
 }
