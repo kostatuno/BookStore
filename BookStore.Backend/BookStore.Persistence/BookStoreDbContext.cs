@@ -1,5 +1,5 @@
-﻿using BookStore.Application.Interfaces;
-using BookStore.Domain.Entities;
+﻿using BookStore.Core.Entities;
+using BookStore.Core.Interfaces;
 using BookStore.Persistence.EntityTypeConfiguration;
 using Microsoft.EntityFrameworkCore;
 using System;

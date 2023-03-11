@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "g4cmC9fUUAYcu00A545zpyLxlpY4NSTJmoMa9jUPD83MfBSv8EselwhzkMvuMueKU09hh2BLeVeh5lblHmocfg==",
+  "dgSpecHash": "gDpzgXKTDToJIoFrGztzYVWLmHYPjzEOr/9zNUX5YwxoW1J0g6C/QayXNaNmoxBdZqdrQYY53/hDjhPANoe9zw==",
   "success": true,
   "projectFilePath": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\BookStore.WebMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

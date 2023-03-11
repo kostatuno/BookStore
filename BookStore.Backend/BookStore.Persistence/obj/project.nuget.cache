@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "iWoTvuV8Lr7Gzzx7H15d0e9FZM+KOIOhUGqmAQJ+GIpX4Z8OtQz0xJotuoYxZ4lqROo6fSDPCkz63M1CUmeTug==",
+  "dgSpecHash": "oLFtX0am2nSN/TCvHvqeuOGEa6H69DH8oFZtK6RfHk/ulMFxgUGuaJoXanEaCNPr9hIDbmr+RVhFaYfwYJiPIQ==",
   "success": true,
   "projectFilePath": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.Persistence\\BookStore.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

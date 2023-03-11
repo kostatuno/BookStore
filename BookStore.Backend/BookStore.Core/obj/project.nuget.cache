@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "GIC/5nyy6iismYgIdNW7vknxgTTFK98yTQSUE3kWSmL1RR7K4mGhd9gcZDDt2aAR2nB1gIS4r584/vhJADSOow==",
+  "dgSpecHash": "4fMpO+9VoVgSXv4rmB29rutZvzrJ2PF6z6S+Hij+QLp/R8GvA/41gSqfTsSSOcWQlqU5X/KNm4ZTPVrj+LDSVA==",
   "success": true,
   "projectFilePath": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.Core\\BookStore.Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ADMIN\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.3\\microsoft.entityframeworkcore.7.0.3.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.3\\microsoft.entityframeworkcore.abstractions.7.0.3.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.3\\microsoft.entityframeworkcore.analyzers.7.0.3.nupkg.sha512",
