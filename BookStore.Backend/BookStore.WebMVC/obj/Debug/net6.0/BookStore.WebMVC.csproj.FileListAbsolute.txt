@@ -81,3 +81,5 @@ D:\PROJECTS_IN_WORK\BookStore\BookStore.Backend\BookStore.WebMVC\obj\Debug\net6.
 D:\PROJECTS_IN_WORK\BookStore\BookStore.Backend\BookStore.WebMVC\obj\Debug\net6.0\BookStore.WebMVC.genruntimeconfig.cache
 D:\PROJECTS_IN_WORK\BookStore\BookStore.Backend\BookStore.WebMVC\obj\Debug\net6.0\ref\BookStore.WebMVC.dll
 D:\PROJECTS_IN_WORK\BookStore\BookStore.Backend\BookStore.WebMVC\bin\Debug\net6.0\BookStore.WebMVC.staticwebassets.runtime.json
+D:\PROJECTS_IN_WORK\BookStore\BookStore.Backend\BookStore.WebMVC\bin\Debug\net6.0\MediatR.dll
+D:\PROJECTS_IN_WORK\BookStore\BookStore.Backend\BookStore.WebMVC\bin\Debug\net6.0\MediatR.Contracts.dll

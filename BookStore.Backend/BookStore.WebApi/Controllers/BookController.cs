@@ -14,7 +14,7 @@ namespace BookStore.WebApi.Controllers
         private readonly IMediator _mediator;
         public BookController(IMediator mediator)
         {
-            this._mediator = mediator;
+            _mediator = mediator;
         }
 
         public async Task CreateBookCommant(CreateBookCommand createBookCommand)

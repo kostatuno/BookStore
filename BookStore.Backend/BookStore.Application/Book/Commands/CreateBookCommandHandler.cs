@@ -23,7 +23,17 @@ namespace BookStore.Application.Commands
             var book = new Book()
             {
                 Id = request.Id,
-                Name = request.Name
+                Name = request.Name,
+                AreIllustrations = request.AreIllustrations,
+                Category = request.Category,
+                CategoryId = request.CategoryId,
+                Cover = request.Cover,
+                InStock = request.InStock,
+                NumberOfPages = request.NumberOfPages,
+                Price = request.Price,
+                ShortDescription = request.ShortDescription,
+                Weight = request.Weight,
+                YearOfPublication = request.YearOfPublication 
             };
 
             await _context.Books.AddAsync(book, cancellationToken);

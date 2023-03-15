@@ -20,8 +20,10 @@ namespace BookStore.Persistence
         public DbSet<CartItem> CartItems { get; set; } = null!;
         public DbSet<Cart> Cart { get; set; } = null!;
 
-        public BookStoreDbContext()
+        public BookStoreDbContext(DbContextOptions<BookStoreDbContext> options)
+            : base(options)
         {
+
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

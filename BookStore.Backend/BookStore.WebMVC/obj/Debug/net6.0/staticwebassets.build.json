@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8qZwT/7wcOAac0Gc1dbySDGN0+n8bHVsE64RsxaxXfw=",
+  "Hash": "r0O6JgPbKxNcUYAHydlqcQYp0WkhXs8UptfhK36C2T8=",
   "Source": "BookStore.WebMVC",
   "BasePath": "_content/BookStore.WebMVC",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\bookstore_logo.png"
+    },
+    {
+      "Identity": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\js\\app.js",
+      "SourceId": "BookStore.WebMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Backend\\BookStore.WebMVC\\wwwroot\\",
+      "BasePath": "_content/BookStore.WebMVC",
+      "RelativePath": "js/app.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\app.js"
     }
   ]
 }
