@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace BookStore.Services.ProductAPI
 {
     public class Program
@@ -13,7 +15,12 @@ namespace BookStore.Services.ProductAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddDbContext<ApplicationDbContext>(options => 
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
             var app = builder.Build();
+
+            
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
