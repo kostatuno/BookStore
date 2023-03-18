@@ -1,4 +1,4 @@
-﻿using BookStore.Domain.Entities;
+﻿using BookStore.Services.ProductAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -8,7 +8,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookStore.Persistence.EntityTypeConfiguration
+namespace BookStore.Services.ProductAPI.EntityTypeConfiguration
 {
     public class BookConfiguration : IEntityTypeConfiguration<Book>
     {
