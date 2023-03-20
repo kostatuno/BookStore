@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore\\BookStore.Services.ProductAPI\\BookStore.Services.ProductAPI.csproj": {}
+    "D:\\PROJECTS_IN_WORK\\Bookstore\\BookStore\\BookStore.Services.ProductAPI\\BookStore.Services.ProductAPI.csproj": {}
   },
   "projects": {
-    "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore\\BookStore.Services.ProductAPI\\BookStore.Services.ProductAPI.csproj": {
+    "D:\\PROJECTS_IN_WORK\\Bookstore\\BookStore\\BookStore.Services.ProductAPI\\BookStore.Services.ProductAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore\\BookStore.Services.ProductAPI\\BookStore.Services.ProductAPI.csproj",
+        "projectUniqueName": "D:\\PROJECTS_IN_WORK\\Bookstore\\BookStore\\BookStore.Services.ProductAPI\\BookStore.Services.ProductAPI.csproj",
         "projectName": "BookStore.Services.ProductAPI",
-        "projectPath": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore\\BookStore.Services.ProductAPI\\BookStore.Services.ProductAPI.csproj",
+        "projectPath": "D:\\PROJECTS_IN_WORK\\Bookstore\\BookStore\\BookStore.Services.ProductAPI\\BookStore.Services.ProductAPI.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore\\BookStore.Services.ProductAPI\\obj\\",
+        "outputPath": "D:\\PROJECTS_IN_WORK\\Bookstore\\BookStore\\BookStore.Services.ProductAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -14,7 +14,7 @@ namespace BookStore.Services.ProductAPI.EntityTypeConfiguration
     {
         public void Configure(EntityTypeBuilder<Book> builder)
         {
-            builder.HasKey(x => x.Id);
+            builder.HasKey(x => x.BookId);
             builder
                 .HasOne(f => f.Category)
                 .WithMany(c => c.Books)

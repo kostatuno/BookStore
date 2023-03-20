@@ -9,7 +9,8 @@ namespace BookStore.Services.ProductAPI.Models
 {
     public class Book
     {
-        public int Id { get; set; }
+        [Key]
+        public int BookId { get; set; }
         [Required]
         public string Name { get; set; }
         public string Description { get; set; }

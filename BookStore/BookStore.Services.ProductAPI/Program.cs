@@ -1,3 +1,5 @@
+using AutoMapper;
+using BookStore.Services.ProductAPI.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookStore.Services.ProductAPI
@@ -10,13 +12,20 @@ namespace BookStore.Services.ProductAPI
 
             // Add services to the container.
 
+            
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddScoped<IBookRepository, BookRepository>();
 
             builder.Services.AddDbContext<ApplicationDbContext>(options => 
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+            builder.Services.AddSingleton(mapper);
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             var app = builder.Build();
 

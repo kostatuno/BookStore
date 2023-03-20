@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore\\BookStore.Web\\BookStore.Web.csproj": {}
+    "D:\\PROJECTS_IN_WORK\\Bookstore\\BookStore\\BookStore.Web\\BookStore.Web.csproj": {}
   },
   "projects": {
-    "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore\\BookStore.Web\\BookStore.Web.csproj": {
+    "D:\\PROJECTS_IN_WORK\\Bookstore\\BookStore\\BookStore.Web\\BookStore.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore\\BookStore.Web\\BookStore.Web.csproj",
+        "projectUniqueName": "D:\\PROJECTS_IN_WORK\\Bookstore\\BookStore\\BookStore.Web\\BookStore.Web.csproj",
         "projectName": "BookStore.Web",
-        "projectPath": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore\\BookStore.Web\\BookStore.Web.csproj",
+        "projectPath": "D:\\PROJECTS_IN_WORK\\Bookstore\\BookStore\\BookStore.Web\\BookStore.Web.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
         "outputPath": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore\\BookStore.Web\\obj\\",
         "projectStyle": "PackageReference",
