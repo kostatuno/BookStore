@@ -1,72 +1,12 @@
 using AutoMapper;
 using BookStore.Services.ProductAPI.Repository;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookStore.Services.ProductAPI
 {
-    public interface ICounter
-    {
-        int Value { get; }
-    }
-    
-    public class RandomCounter : ICounter
-    {
-        static Random random = new Random();
-        private int _value;
-        public RandomCounter()
-        {
-            _value = random.Next(0, 1000000);
-        }
-        public int Value
-        {
-            get
-            {
-                return _value;
-            }
-        }
-    } 
-
-    public class CounterService
-    {
-        public ICounter counter;
-        public CounterService(ICounter counter)
-        {
-            this.counter = counter;
-        }
-    }
-
-    public class CounterMiddleware
-    {
-        RequestDelegate next;
-        int i = 0; // счетчик запросов
-        public CounterMiddleware(RequestDelegate next)
-        {
-            this.next = next;
-        }
-        public async Task InvokeAsync(HttpContext httpContext, ICounter counter, CounterService counterService)
-        {
-            i++;
-            httpContext.Response.ContentType = "text/html;charset=utf-8";
-            await httpContext.Response.WriteAsync($"Запрос {i}; Counter: {counter.Value}; Service: {counterService.counter.Value}");
-        }
-    }
-
     public class Program
     {
         public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder();
-
-            builder.Services.AddTransient<ICounter, RandomCounter>();
-            builder.Services.AddTransient<CounterService>();
-            var app = builder.Build();
-
-            app.UseMiddleware<CounterMiddleware>();
-
-            app.Run();
-        }
-        /*public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -102,6 +42,6 @@ namespace BookStore.Services.ProductAPI
             app.MapControllers();
 
             app.Run();
-        }*/
+        }
     }
 }
