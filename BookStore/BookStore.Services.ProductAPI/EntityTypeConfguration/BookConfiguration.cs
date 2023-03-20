@@ -16,7 +16,7 @@ namespace BookStore.Services.ProductAPI.EntityTypeConfiguration
         {
             builder.HasKey(x => x.BookId);
             builder
-                .HasOne(f => f.Category)
+                .HasOne(f => f.Genre)
                 .WithMany(c => c.Books)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Cascade);

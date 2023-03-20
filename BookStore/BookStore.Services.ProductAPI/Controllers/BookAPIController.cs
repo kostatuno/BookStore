@@ -48,5 +48,53 @@ namespace BookStore.Services.ProductAPI.Controllers
             }
             return _response;
         }
+
+        [HttpPost]
+        public async Task<object> Post([FromBody] BookDto bookDto)
+        {
+            try
+            {
+                var model = await _bookRepository.CreateUpdateBook(bookDto);
+                _response.Result = model;
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string>() { ex.ToString() };
+            }
+            return _response;
+        }
+
+        [HttpPut]
+        public async Task<object> Put([FromBody] BookDto bookDto)
+        {
+            try
+            {
+                var model = await _bookRepository.CreateUpdateBook(bookDto);
+                _response.Result = model;
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string>() { ex.ToString() };
+            }
+            return _response;
+        }
+
+        [HttpDelete]
+        public async Task<object> Delete(int id)
+        {
+            try
+            {
+                var isSuccess = await _bookRepository.DeleteBook(id);
+                _response.Result = isSuccess;
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string>() { ex.ToString() };
+            }
+            return _response;
+        }
     }
 }

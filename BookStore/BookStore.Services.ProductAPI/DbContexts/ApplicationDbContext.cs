@@ -10,10 +10,11 @@ public class ApplicationDbContext : DbContext
 	}
 
     public DbSet<Book> Books { get; set; } = null!;
-    public DbSet<Category> Categories { get; set; } = null!;
+    public DbSet<Genre> Genre { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.ApplyConfiguration(new GenreConfiguration());
         modelBuilder.ApplyConfiguration(new BookConfiguration());
         base.OnModelCreating(modelBuilder);
     }

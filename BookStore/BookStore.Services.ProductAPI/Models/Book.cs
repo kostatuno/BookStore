@@ -23,8 +23,8 @@ namespace BookStore.Services.ProductAPI.Models
         [Range(1, 5000)]
         public decimal Price { get; set; }
         public int InStock { get; set; }
-        public int CategoryId { get; set; }
-        public virtual Category Category { get; set; }
+        public int GenreId { get; set; }
+        public virtual Genre Genre { get; set; }
         public string ImageUrl { get; set; }
     }
 }

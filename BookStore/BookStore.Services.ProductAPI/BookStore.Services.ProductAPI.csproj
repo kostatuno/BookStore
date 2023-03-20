@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <Folder Include="DbContexts\" />
-    <Folder Include="EntityTypeConfguration\" />
     <Folder Include="Models\Dto\" />
     <Folder Include="Repository\" />
   </ItemGroup>
