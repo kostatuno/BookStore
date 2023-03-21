@@ -53,12 +53,13 @@ namespace BookStore.Services.BookAPI.Repository
         public async Task<BookDto> GetBookById(int id)
         {
             var book = await _context.Books.FirstOrDefaultAsync(x => x.BookId == id);
+            await _context.Entry(book).Reference(x => x.Genre).LoadAsync();
             return _mapper.Map<BookDto>(book);
         }
 
         public async Task<IEnumerable<BookDto>> GetBooks()
         {
-            var books = await _context.Books.ToListAsync();
+            var books = await _context.Books.Include(b => b.Genre).ToListAsync();
             return _mapper.Map<List<BookDto>>(books);
         }
     }
