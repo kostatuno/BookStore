@@ -10,7 +10,9 @@ namespace BookStore.Services.BookAPI
         {
             var mappingConfig = new MapperConfiguration(config =>
             {
-                config.CreateMap<Book, BookDto>();
+                config.CreateMap<Book, BookDto>()
+                    .ForMember(dst => dst.Genre, opt =>
+                    opt.MapFrom(src => src.Genre.Name));
                 config.CreateMap<BookDto, Book>();
             });
 
