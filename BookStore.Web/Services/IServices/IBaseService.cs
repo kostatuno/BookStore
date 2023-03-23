@@ -1,6 +1,11 @@
-﻿namespace BookStore.Web.Services.IServices
+﻿using BookStore.Web.Models;
+
+namespace BookStore.Web.Services.IServices
 {
-    public interface IBaseService
+    public interface IBaseService : IDisposable
     {
+        ResponseDto responseModel { get; set; }
+        Task<T> SendAsync<T>(ApiRequest apiRequest);
+
     }
 }

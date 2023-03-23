@@ -1,4 +1,4 @@
-namespace BookStore.Services.BookAPI.Models.Dto
+namespace BookStore.Web.Models
 {
     public class ResponseDto
     {

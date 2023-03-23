@@ -1,6 +1,6 @@
 ﻿namespace BookStore.Web
 {
-    public static class CD
+    public static class SD
     {
         public static string ProductAPIBase { get; set; }
         public enum ApiType
