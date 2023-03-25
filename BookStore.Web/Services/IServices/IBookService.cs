@@ -2,10 +2,10 @@
 
 namespace BookStore.Web.Services.IServices
 {
-    public interface IBookService
+    public interface IBookService : IBaseService
     {
         Task<T> GetAllBooksAsync<T>();
-        Task<T> GetAllByIdAsync<T>(int id);
+        Task<T> GetBookByIdAsync<T>(int id);
         Task<T> CreateBookAsync<T>(BookDto bookDto);
         Task<T> UpdateBookAsync<T>(BookDto bookDto);
         Task<T> DeleteBookAsync<T>(int id);
