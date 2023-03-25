@@ -1,23 +1,11 @@
 {
   "Version": 1,
-  "Hash": "sRS3/JcvPvNqDS6x7i8xPI2FcLVQMXYw1dSbg4K8x+E=",
+  "Hash": "fk2EqJK0HPeRj9ZVPtipJOkbIWbeDEnLXMdOmSTxRRw=",
   "Source": "BookStore.Web",
   "BasePath": "_content/BookStore.Web",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [
-    {
-      "Identity": "D:\\PROJECTS_IN_WORK\\BookStore\\BookStore.Services.BookAPI\\BookStore.Services.BookAPI.csproj",
-      "Version": 2,
-      "Source": "BookStore.Services.BookAPI",
-      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
-      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
-      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
-      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
-    }
-  ],
+  "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
       "Name": "BookStore.Web\\wwwroot",

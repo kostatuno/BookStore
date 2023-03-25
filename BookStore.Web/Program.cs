@@ -1,3 +1,6 @@
+using BookStore.Web.Services;
+using BookStore.Web.Services.IServices;
+
 namespace BookStore.Web
 {
     public class Program
@@ -6,6 +9,9 @@ namespace BookStore.Web
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddHttpClient<IBookService, BookService>();
+            SD.BookAPIBase = builder.Configuration["ServicesUrls:BookAPI"];
+            builder.Services.AddScoped<IBookService, BookService>();
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
