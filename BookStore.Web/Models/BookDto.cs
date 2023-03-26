@@ -8,5 +8,10 @@ namespace BookStore.Web.Models
         public string Description { get; set; } 
         public string Genre { get; set; }
         public string ImageUrl { get; set; }
+
+        public override string ToString()
+        {
+            return $"Name: {Name}, Price: {Price}, Genre: {Genre}";
+        }
     }
 }

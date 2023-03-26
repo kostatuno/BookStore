@@ -9,8 +9,6 @@ namespace BookStore.Web.Services
         {
         }
 
-        public ResponseDto responseModel { get; set; }
-
         public async Task<T> CreateBookAsync<T>(BookDto bookDto)
         {
             return await SendAsync<T>(new ApiRequest()

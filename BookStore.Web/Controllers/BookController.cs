@@ -22,13 +22,14 @@ namespace BookStore.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var list = new List<BookDto>();
+            var books = new List<BookDto>();
             var response = await _bookService.GetAllBooksAsync<ResponseDto>();
             if (response is not null && response.IsSuccess == true)
             {
-                list = JsonConvert.DeserializeObject<List<BookDto>>(Convert.ToString(response.Result));
+                books = JsonConvert.DeserializeObject<List<BookDto>>(Convert.ToString(response.Result));
             }
-            return View(list);
+            ViewData["books"] = books;
+            return View(books);
         }
 
         [HttpGet]
@@ -40,7 +41,7 @@ namespace BookStore.Web.Controllers
             {
                 bookDto = JsonConvert.DeserializeObject<BookDto>(Convert.ToString(response.Result));
             }
-            return View(response);
+            return View(bookDto);
         }
 
         [HttpDelete]
@@ -50,7 +51,7 @@ namespace BookStore.Web.Controllers
             var response = await _bookService.DeleteBookAsync<ResponseDto>(id);
             if (response is not null && response.IsSuccess == true)
             {
-                result = JsonConvert.DeserializeObject<BookDto>(Convert.ToString(response.Result));
+                result = JsonConvert.DeserializeObject<string>(Convert.ToString(response.Result));
             }
             return View(result);
         }
@@ -64,16 +65,30 @@ namespace BookStore.Web.Controllers
             {
                 bookDtoResult = JsonConvert.DeserializeObject<BookDto>(Convert.ToString(response.Result));
             }
-            return View(response);
+            return View(bookDtoResult);
         }
 
         [HttpPut]
         public async Task<IActionResult> Update(BookDto bookDto)
         {
+            var bookDtoResult = new BookDto();
             var response = await _bookService.UpdateBookAsync<ResponseDto>(bookDto);
-            return View(response);
+            if (response is not null && response.IsSuccess == true)
+            {
+                bookDtoResult = JsonConvert.DeserializeObject<BookDto>(Convert.ToString(response.Result));
+            }
+            return View(bookDtoResult);
         }
 
-
+/*        public IActionResult Info()
+        {
+            int i = 0;
+            i++;
+            if (i >= 5)
+            {
+                return RedirectToAction("GetAll", "Book");
+            }
+            return Content(i.ToString());
+        }*/
     }
 }
