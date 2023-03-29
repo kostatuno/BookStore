@@ -56,20 +56,21 @@ namespace BookStore.Web.Controllers
             return View(result);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create(BookDto bookDto)
+/*        [HttpPost]*/
+        public async Task<IActionResult> Create(/*BookDto bookDto*/)
         {
-            var bookDtoResult = new BookDto();
+            /*var bookDtoResult = new BookDto();
             var response = await _bookService.CreateBookAsync<ResponseDto>(bookDtoResult);
             if (response is not null && response.IsSuccess == true)
             {
                 bookDtoResult = JsonConvert.DeserializeObject<BookDto>(Convert.ToString(response.Result));
             }
-            return View(bookDtoResult);
+            return View(bookDtoResult);*/
+            return View();
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update(BookDto bookDto)
+        public async Task<IActionResult> Edit(BookDto bookDto)
         {
             var bookDtoResult = new BookDto();
             var response = await _bookService.UpdateBookAsync<ResponseDto>(bookDto);
@@ -79,16 +80,5 @@ namespace BookStore.Web.Controllers
             }
             return View(bookDtoResult);
         }
-
-/*        public IActionResult Info()
-        {
-            int i = 0;
-            i++;
-            if (i >= 5)
-            {
-                return RedirectToAction("GetAll", "Book");
-            }
-            return Content(i.ToString());
-        }*/
     }
 }

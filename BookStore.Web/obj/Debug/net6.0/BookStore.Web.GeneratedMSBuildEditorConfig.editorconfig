@@ -16,12 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\PROJECTS_IN_WORK\BookStore\BookStore.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/PROJECTS_IN_WORK/BookStore/BookStore.Web/Views/Book/GetAll.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xHZXRBbGwuY3NodG1s
+[D:/PROJECTS_IN_WORK/BookStore/BookStore.Web/Views/Book/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PROJECTS_IN_WORK/BookStore/BookStore.Web/Views/Book/Info.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xJbmZvLmNzaHRtbA==
+[D:/PROJECTS_IN_WORK/BookStore/BookStore.Web/Views/Book/GetAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xHZXRBbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PROJECTS_IN_WORK/BookStore/BookStore.Web/Views/Home/Index.cshtml]
