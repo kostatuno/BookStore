@@ -56,17 +56,25 @@ namespace BookStore.Web.Controllers
             return View(result);
         }
 
-/*        [HttpPost]*/
-        public async Task<IActionResult> Create(/*BookDto bookDto*/)
+        [HttpGet]
+        public async Task<IActionResult> Create()
         {
-            /*var bookDtoResult = new BookDto();
-            var response = await _bookService.CreateBookAsync<ResponseDto>(bookDtoResult);
-            if (response is not null && response.IsSuccess == true)
-            {
-                bookDtoResult = JsonConvert.DeserializeObject<BookDto>(Convert.ToString(response.Result));
-            }
-            return View(bookDtoResult);*/
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(BookDto bookDto)
+        {
+            if (ModelState.IsValid)
+            {
+                var response = await _bookService.CreateBookAsync<ResponseDto>(bookDto);
+                if (response is not null && response.IsSuccess == true)
+                {
+                    return RedirectToAction(nameof(GetAll));
+                }
+            }
+            return View(bookDto);
         }
 
         [HttpPut]
