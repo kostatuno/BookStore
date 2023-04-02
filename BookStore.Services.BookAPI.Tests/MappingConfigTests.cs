@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BookStore.Services.BookAPI.Mapping;
 using BookStore.Services.BookAPI.Models;
 using BookStore.Services.BookAPI.Models.Dto;
 using System;
