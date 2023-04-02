@@ -10,9 +10,8 @@ namespace BookStore.Web
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddHttpClient<IBookService, BookService>();
-            SD.BookAPIBase = builder.Configuration["ServicesUrls:BookAPI"];
+            SD.BookAPIBase = builder.Configuration["ServiceUrls:BookAPI"];
             builder.Services.AddScoped<IBookService, BookService>();
-            // Add services to the container.
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();

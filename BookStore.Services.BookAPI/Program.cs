@@ -1,4 +1,5 @@
 using AutoMapper;
+using BookStore.Services.BookAPI.Mapping;
 using BookStore.Services.BookAPI.Repository;
 using Microsoft.EntityFrameworkCore;
 

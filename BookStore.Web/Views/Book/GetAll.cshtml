@@ -1,0 +1,51 @@
+﻿@model List<BookDto>
+
+<br />
+<br />
+<div class="container p-4 border">
+    <div class="row pb-2">
+        <div class="col">
+            <h1 class="text-primary">Books List</h1>
+        </div>
+        <div class="col text-end pt-1">
+         <a asp-action="Create" class="btn btn-outline-primary"><i class="fas fa-plus">Create new book</i></a>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Genre</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (BookDto book in Model)
+            {
+                <tr>
+                    <td>
+                        @book.Name
+                    </td>
+                    <td>
+                        @book.Genre
+                    </td>
+                    <td>
+                        @book.Price
+                    </td>
+                    <td>
+                        @book.Description
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-bookId="@book.BookId" class="btn btn-success ">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a asp-action="Delete" asp-route-bookId="@book.BookId" class="btn btn-danger ">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
