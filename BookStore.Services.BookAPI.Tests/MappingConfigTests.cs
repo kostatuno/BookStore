@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BookStore.Services.BookAPI.Extensions;
 using BookStore.Services.BookAPI.Mapping;
 using BookStore.Services.BookAPI.Models;
 using BookStore.Services.BookAPI.Models.Dto;
@@ -103,8 +104,27 @@ namespace BookStore.Services.BookAPI.Tests
             };
 
             var book = mapper.Map<BookDto, Book>(bookDto);
-
             Assert.True(book.Genre.Name == "someGenre");
+        }
+
+        [Fact]
+        public void Map_DtoToBook_ThereIsTheGenreInDb()
+        {
+            IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+            BookDto bookDto = new BookDto()
+            {
+                BookId = 0,
+                Name = "test",
+                Price = 0,
+                Description = "test",
+                Genre = "Politics1",
+                ImageUrl = "test"
+            };
+
+            
+
+            var book = mapper.Map(bookDto);
+            Assert.True(book.Genre.Name == "Politics1");
         }
     }
 }
