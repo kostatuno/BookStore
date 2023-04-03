@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BookStore.Services.BookAPI.Exceptions;
 using BookStore.Services.BookAPI.Extensions;
 using BookStore.Services.BookAPI.Mapping;
 using BookStore.Services.BookAPI.Models;
@@ -86,7 +87,7 @@ namespace BookStore.Services.BookAPI.Tests
 
             var book = mapper.Map<BookDto, Book>(bookDto);
 
-            Assert.True(book.Genre.Name != null);
+            Assert.NotNull(book.Genre.Name);
         }
 
         [Fact]
@@ -108,7 +109,7 @@ namespace BookStore.Services.BookAPI.Tests
         }
 
         [Fact]
-        public void Map_DtoToBook_ThereIsTheGenreInDb()
+        public void Map_DtoToBook_ThereIsNotTheGenreInDb()
         {
             IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
             BookDto bookDto = new BookDto()
@@ -121,10 +122,50 @@ namespace BookStore.Services.BookAPI.Tests
                 ImageUrl = "test"
             };
 
-            
-
             var book = mapper.Map(bookDto);
             Assert.True(book.Genre.Name == "Politics1");
+        }
+
+        [Fact]
+        public void Map_DtoToBook_AutoMapperNoSuchGenreException()
+        {
+            IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+            BookDto bookDto = new BookDto()
+            {
+                BookId = 0,
+                Name = "test",
+                Price = 0,
+                Description = "test",
+                Genre = "SomePolitics",
+                ImageUrl = "test"
+            };
+
+            var book = new Book();
+            Assert.Throws<AutoMapperNoSuchGenreException>(() =>
+            {
+                book = mapper.Map(bookDto);
+            });
+        }
+
+        [Fact]
+        public void Map_DtoToBook_ThereWontBeAutoMapperNoSuchGenreException()
+        {
+            IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+            BookDto bookDto = new BookDto()
+            {
+                BookId = 0,
+                Name = "test",
+                Price = 0,
+                Description = "test",
+                Genre = "Memoir",
+                ImageUrl = "test"
+            };
+
+            var book = new Book();
+            Assert.Throws<AutoMapperNoSuchGenreException>(() =>
+            {
+                book = mapper.Map(bookDto);
+            });
         }
     }
 }

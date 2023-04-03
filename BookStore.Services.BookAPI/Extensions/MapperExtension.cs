@@ -34,7 +34,7 @@ namespace BookStore.Services.BookAPI.Extensions
         public static Book Map(this IMapper mapper, BookDto source)
         {
             if (!Genres.Any(g => g.Name == source.Genre))
-                throw new AutoMapperNoSuchGenre();
+                throw new AutoMapperNoSuchGenreException();
 
             var book = mapper.Map<BookDto, Book>(source);
 

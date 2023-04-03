@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace BookStore.Services.BookAPI.Exceptions
 {
-    public class AutoMapperNoSuchGenre : AutoMapperMappingException
+    public class AutoMapperNoSuchGenreException : AutoMapperMappingException
     {
-        public AutoMapperNoSuchGenre()
+        public AutoMapperNoSuchGenreException()
         {
         }
 

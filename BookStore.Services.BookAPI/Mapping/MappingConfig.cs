@@ -22,7 +22,6 @@ namespace BookStore.Services.BookAPI.Mapping
                     .ForMember(dst => dst.Weight, opt => opt.Ignore())
                     .ForMember(dst => dst.GenreId, opt => opt.Ignore())
                     .ForMember(dst => dst.Genre, opt => opt.MapFrom(src => new Genre() { Name = src.Genre }));
-
             });
 
             return mappingConfig;
