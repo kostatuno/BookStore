@@ -50,7 +50,25 @@ namespace BookStore.Services.BookAPI.Tests
                 Genre = "Humor"
             };
 
+            var result = new Book()
+            {
+                BookId = 0,
+                AreIllustrations = true,
+                Cover = "Soft",
+                Description = "Some Description",
+                GenreId = 3,
+                ImageUrl = "https://projectsbykostatuno.blob.core.windows.net/bookstore/abraham_lincoln_a_history_vol.i.jpg",
+                InStock = 21,
+                Name = "Abraham Lincolsdfn: A History, Vol. I",
+                Price = 299,
+                Weight = 699,
+                NumberOfPages = 152,
+                YearOfPublication = new DateTime(2009, 04, 17)
+            };
+
             var book = mapper.Map(bookView);
+
+            book.Genre = null;
 
             Assert.Throws<DbUpdateException>(() =>
             {

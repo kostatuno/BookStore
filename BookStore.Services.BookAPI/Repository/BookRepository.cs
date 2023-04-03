@@ -19,15 +19,20 @@ namespace BookStore.Services.BookAPI.Repository
         public async Task<BookViewModel> CreateUpdateBook(BookViewModel bookView)
         {
             var book = _mapper.Map(bookView);
+            var genre = book.Genre;
+            
             if (book.BookId > 0) 
             { 
                 _context.Books.Update(book);
             }
             else
             {
+                book.Genre = null;
                 _context.Books.Add(book);
             }
+            
             await _context.SaveChangesAsync();
+            book.Genre = genre;
             return _mapper.Map<Book, BookViewModel>(book);
         }
 
