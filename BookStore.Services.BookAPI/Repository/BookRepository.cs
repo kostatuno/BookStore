@@ -15,9 +15,9 @@ namespace BookStore.Services.BookAPI.Repository
             _mapper = mapper;
         }
 
-        public async Task<BookDto> CreateUpdateBook(BookDto bookDto)
+        public async Task<BookViewModel> CreateUpdateBook(BookViewModel bookDto)
         {
-            var book = _mapper.Map<BookDto, Book>(bookDto);
+            var book = _mapper.Map<BookViewModel, Book>(bookDto);
             if (book.BookId > 0) 
             { 
                 _context.Books.Update(book);
@@ -27,7 +27,7 @@ namespace BookStore.Services.BookAPI.Repository
                 _context.Books.Add(book);
             }
             await _context.SaveChangesAsync();
-            return _mapper.Map<Book, BookDto>(book);
+            return _mapper.Map<Book, BookViewModel>(book);
         }
 
         public async Task<bool> DeleteBook(int id)
@@ -49,17 +49,17 @@ namespace BookStore.Services.BookAPI.Repository
             }
         }
 
-        public async Task<BookDto> GetBookById(int id)
+        public async Task<BookViewModel> GetBookById(int id)
         {
             var book = await _context.Books.FirstOrDefaultAsync(x => x.BookId == id);
             await _context.Entry(book).Reference(x => x.Genre).LoadAsync();
-            return _mapper.Map<BookDto>(book);
+            return _mapper.Map<BookViewModel>(book);
         }
 
-        public async Task<IEnumerable<BookDto>> GetBooks()
+        public async Task<IEnumerable<BookViewModel>> GetBooks()
         {
             var books = await _context.Books.Include(b => b.Genre).ToListAsync();
-            return _mapper.Map<List<BookDto>>(books);
+            return _mapper.Map<List<BookViewModel>>(books);
         }
     }
 }

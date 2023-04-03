@@ -3,10 +3,10 @@ using BookStore.Services.BookAPI.Exceptions;
 using BookStore.Services.BookAPI.Extensions;
 using BookStore.Services.BookAPI.Mapping;
 using BookStore.Services.BookAPI.Models;
-using BookStore.Services.BookAPI.Models.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,7 +15,7 @@ namespace BookStore.Services.BookAPI.Tests
     public class MappingConfigTests
     {
         [Fact]
-        public void Map_BookToDto_True()
+        public void Map_BookToBookView_True()
         {
             IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
             Book book = new()
@@ -29,7 +29,7 @@ namespace BookStore.Services.BookAPI.Tests
                 ImageUrl = "test",
                 Description = "test",
                 Weight = 100,
-                YearOfPublication = DateTime.Now,
+                YearOfPublication = new DateTime(2000, 01, 01),
                 NumberOfPages = 100,
                 GenreId = 1,
                 Genre = new Genre()
@@ -40,111 +40,149 @@ namespace BookStore.Services.BookAPI.Tests
                 }
             };
 
-            var bookDto = mapper.Map<Book, BookDto>(book);
-            Assert.True(bookDto.Equals(new BookDto()
+            var bookView = mapper.Map<Book, BookViewModel>(book);
+
+            Assert.True(bookView.Equals(new BookViewModel()
             {
                 BookId = 0,
-                Description = "test",
-                Genre = "test",
-                ImageUrl = "test",
                 Name = "test",
-                Price = 0
+                AreIllustrations = true,
+                Price = 0,
+                Cover = "test",
+                InStock = 1,
+                ImageUrl = "test",
+                Description = "test",
+                Weight = 100,
+                YearOfPublication = new DateTime(2000, 01, 01),
+                NumberOfPages = 100,
+                Genre = "test"
             }));
         }
 
         [Fact]
-        public void Map_DtoToBook_GenreIsNotNull()
+        public void Map_BookViewToBook_GenreIsNotNull()
         {
             IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
-            BookDto bookDto = new BookDto()
+            BookViewModel bookView = new BookViewModel()
             {
                 BookId = 0,
                 Name = "test",
+                AreIllustrations = true,
                 Price = 0,
+                Cover = "test",
+                InStock = 1,
+                ImageUrl = "test",
                 Description = "test",
-                Genre = "test",
-                ImageUrl = "test"
+                Weight = 100,
+                YearOfPublication = new DateTime(2000, 01, 01),
+                NumberOfPages = 100,
+                Genre = "test"
             };
 
-            var book = mapper.Map<BookDto, Book>(bookDto);
+            var book = mapper.Map<BookViewModel, Book>(bookView);
 
-            Assert.True(book.Genre != null);
+            Assert.NotNull(book.Genre);
         }
 
         [Fact]
-        public void Map_DtoToBook_NameOfGenreIsNotNull()
+        public void Map_BookViewToBook_NameOfGenreIsNotNull()
         {
             IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
-            BookDto bookDto = new BookDto()
+            BookViewModel bookView = new BookViewModel()
             {
                 BookId = 0,
                 Name = "test",
+                AreIllustrations = true,
                 Price = 0,
+                Cover = "test",
+                InStock = 1,
+                ImageUrl = "test",
                 Description = "test",
-                Genre = "test",
-                ImageUrl = "test"
+                Weight = 100,
+                YearOfPublication = new DateTime(2000, 01, 01),
+                NumberOfPages = 100,
+                Genre = "test"
             };
 
-            var book = mapper.Map<BookDto, Book>(bookDto);
+            var book = mapper.Map<BookViewModel, Book>(bookView);
 
             Assert.NotNull(book.Genre.Name);
         }
 
         [Fact]
-        public void Map_DtoToBook_NameOfGenreIsCalledsomeGenre()
+        public void Map_BookViewToBook_NameOfGenreIsCalledsomeGenre()
         {
             IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
-            BookDto bookDto = new BookDto()
+            BookViewModel bookView = new BookViewModel()
             {
                 BookId = 0,
                 Name = "test",
+                AreIllustrations = true,
                 Price = 0,
+                Cover = "test",
+                InStock = 1,
+                ImageUrl = "test",
                 Description = "test",
-                Genre = "someGenre",
-                ImageUrl = "test"
+                Weight = 100,
+                YearOfPublication = new DateTime(2000, 01, 01),
+                NumberOfPages = 100,
+                Genre = "someGenre"
             };
 
-            var book = mapper.Map<BookDto, Book>(bookDto);
+            var book = mapper.Map<BookViewModel, Book>(bookView);
             Assert.True(book.Genre.Name == "someGenre");
         }
 
+
         [Fact]
-        public void Map_DtoToBook_ThereIsNotTheGenreInDb()
+        public void Map_BookViewToBook_AutoMapperNoSuchGenreException()
         {
             IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
-            BookDto bookDto = new BookDto()
+            BookViewModel bookView = new BookViewModel()
             {
                 BookId = 0,
                 Name = "test",
+                AreIllustrations = true,
                 Price = 0,
+                Cover = "test",
+                InStock = 1,
+                ImageUrl = "test",
                 Description = "test",
-                Genre = "Politics1",
-                ImageUrl = "test"
-            };
-
-            var book = mapper.Map(bookDto);
-            Assert.True(book.Genre.Name == "Politics1");
-        }
-
-        [Fact]
-        public void Map_DtoToBook_AutoMapperNoSuchGenreException()
-        {
-            IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
-            BookDto bookDto = new BookDto()
-            {
-                BookId = 0,
-                Name = "test",
-                Price = 0,
-                Description = "test",
-                Genre = "SomePolitics",
-                ImageUrl = "test"
+                Weight = 100,
+                YearOfPublication = new DateTime(2000, 01, 01),
+                NumberOfPages = 100,
+                Genre = "test"
             };
 
             var book = new Book();
             Assert.Throws<AutoMapperNoSuchGenreException>(() =>
             {
-                book = mapper.Map(bookDto);
+                book = mapper.Map(bookView);
             });
+        }
+
+        [Fact]
+        public void Map_BookViewToBook_ThereWontBeAutoMapperNoSuchGenreException()
+        {
+            IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+            BookViewModel bookView = new BookViewModel()
+            {
+                BookId = 0,
+                Name = "test",
+                AreIllustrations = true,
+                Price = 0,
+                Cover = "test",
+                InStock = 1,
+                ImageUrl = "test",
+                Description = "test",
+                Weight = 100,
+                YearOfPublication = new DateTime(2000, 01, 01),
+                NumberOfPages = 100,
+                Genre = "Politics"
+            };
+
+            var book = mapper.Map(bookView);
+            Assert.True(book.Genre.Name == "Politics");
         }
     }
 }

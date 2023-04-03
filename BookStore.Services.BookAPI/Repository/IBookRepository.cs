@@ -1,12 +1,12 @@
-using BookStore.Services.BookAPI.Models.Dto;
+using BookStore.Services.BookAPI.Models;
 
 namespace BookStore.Services.BookAPI.Repository
 {
     public interface IBookRepository
     {
-        Task<IEnumerable<BookDto>> GetBooks();
-        Task<BookDto> GetBookById(int id);
-        Task<BookDto> CreateUpdateBook(BookDto bookDto);
+        Task<IEnumerable<BookViewModel>> GetBooks();
+        Task<BookViewModel> GetBookById(int id);
+        Task<BookViewModel> CreateUpdateBook(BookViewModel bookDto);
         Task<bool> DeleteBook(int id);
     }
 }

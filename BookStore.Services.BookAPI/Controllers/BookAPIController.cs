@@ -51,7 +51,7 @@ namespace BookStore.Services.BookAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<object> Post([FromBody] BookDto bookDto)
+        public async Task<object> Post([FromBody] BookViewModel bookDto)
         {
             try
             {
@@ -67,7 +67,7 @@ namespace BookStore.Services.BookAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<object> Put([FromBody] BookDto bookDto)
+        public async Task<object> Put([FromBody] BookViewModel bookDto)
         {
             try
             {

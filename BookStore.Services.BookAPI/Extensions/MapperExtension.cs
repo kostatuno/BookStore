@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using BookStore.Services.BookAPI.Exceptions;
 using BookStore.Services.BookAPI.Models;
-using BookStore.Services.BookAPI.Models.Dto;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -31,12 +30,17 @@ namespace BookStore.Services.BookAPI.Extensions
                 Genres = db.Genre.ToList();
         }
 
-        public static Book Map(this IMapper mapper, BookDto source)
+        public static Book Map(this IMapper mapper, BookViewModel source)
         {
-            if (!Genres.Any(g => g.Name == source.Genre))
-                throw new AutoMapperNoSuchGenreException();
+            var genre = Genres.FirstOrDefault(g => g.Name == source.Genre);
 
-            var book = mapper.Map<BookDto, Book>(source);
+            if (genre is null)
+                throw new AutoMapperNoSuchGenreException();
+                
+            var book = mapper.Map<BookViewModel, Book>(source);
+
+            book.GenreId = genre.Id;
+            book.Genre = genre;
 
             return book;
         }
