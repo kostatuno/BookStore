@@ -138,10 +138,7 @@ namespace BookStore.Services.BookAPI.Migrations
             modelBuilder.Entity("BookStore.Services.BookAPI.Models.Genre", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
                         .IsRequired()
