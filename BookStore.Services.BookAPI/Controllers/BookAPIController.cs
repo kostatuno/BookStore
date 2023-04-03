@@ -22,8 +22,8 @@ namespace BookStore.Services.BookAPI.Controllers
         {
             try
             {
-                var booksDto = await _bookRepository.GetBooks();
-                _response.Result = booksDto;
+                var bookView = await _bookRepository.GetBooks();
+                _response.Result = bookView;
             }
             catch (Exception ex)
             {
@@ -39,8 +39,8 @@ namespace BookStore.Services.BookAPI.Controllers
         {
             try
             {
-                var bookDto = await _bookRepository.GetBookById(id);
-                _response.Result = bookDto;
+                var bookView = await _bookRepository.GetBookById(id);
+                _response.Result = bookView;
             }
             catch (Exception ex)
             {
@@ -51,11 +51,11 @@ namespace BookStore.Services.BookAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<object> Post([FromBody] BookViewModel bookDto)
+        public async Task<object> Post([FromBody] BookViewModel bookView)
         {
             try
             {
-                var model = await _bookRepository.CreateUpdateBook(bookDto);
+                var model = await _bookRepository.CreateUpdateBook(bookView);
                 _response.Result = model;
             }
             catch (Exception ex)
@@ -67,11 +67,11 @@ namespace BookStore.Services.BookAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<object> Put([FromBody] BookViewModel bookDto)
+        public async Task<object> Put([FromBody] BookViewModel bookView)
         {
             try
             {
-                var model = await _bookRepository.CreateUpdateBook(bookDto);
+                var model = await _bookRepository.CreateUpdateBook(bookView);
                 _response.Result = model;
             }
             catch (Exception ex)

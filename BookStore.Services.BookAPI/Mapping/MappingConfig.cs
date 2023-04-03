@@ -14,6 +14,7 @@ namespace BookStore.Services.BookAPI.Mapping
                     opt.MapFrom(src => src.Genre.Name));
                 config.CreateMap<BookViewModel, Book>()
                     .ForMember(dst => dst.GenreId, opt => opt.Ignore())
+                    .ForMember(dst => dst.BookId, opt => opt.Ignore())
                     .ForMember(dst => dst.Genre, opt => opt.MapFrom(src => new Genre() { Name = src.Genre }));
             });
 

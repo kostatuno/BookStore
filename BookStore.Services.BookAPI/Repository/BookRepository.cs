@@ -1,6 +1,7 @@
 using AutoMapper;
 using BookStore.Services.BookAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using BookStore.Services.BookAPI.Extensions;
 
 namespace BookStore.Services.BookAPI.Repository
 {
@@ -15,9 +16,9 @@ namespace BookStore.Services.BookAPI.Repository
             _mapper = mapper;
         }
 
-        public async Task<BookViewModel> CreateUpdateBook(BookViewModel bookDto)
+        public async Task<BookViewModel> CreateUpdateBook(BookViewModel bookView)
         {
-            var book = _mapper.Map<BookViewModel, Book>(bookDto);
+            var book = _mapper.Map(bookView);
             if (book.BookId > 0) 
             { 
                 _context.Books.Update(book);

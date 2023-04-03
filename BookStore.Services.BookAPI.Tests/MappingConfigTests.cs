@@ -184,5 +184,29 @@ namespace BookStore.Services.BookAPI.Tests
             var book = mapper.Map(bookView);
             Assert.True(book.Genre.Name == "Politics");
         }
+
+        [Fact]
+        public void Map_BookViewToBook_BookIdEqualZero()
+        {
+            IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+            BookViewModel bookView = new BookViewModel()
+            {
+                BookId = 0,
+                Name = "test",
+                AreIllustrations = true,
+                Price = 0,
+                Cover = "test",
+                InStock = 1,
+                ImageUrl = "test",
+                Description = "test",
+                Weight = 100,
+                YearOfPublication = new DateTime(2000, 01, 01),
+                NumberOfPages = 100,
+                Genre = "Politics"
+            };
+
+            var book = mapper.Map(bookView);
+            Assert.True(book.BookId == 0);
+        }
     }
 }

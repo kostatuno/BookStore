@@ -78,7 +78,7 @@ namespace BookStore.Services.BookAPI.EntityTypeConfiguration
                     NumberOfPages = 132,
                     YearOfPublication = new DateTime(1881, 02, 15)
                 },
-            }); ;
+            });
         }
     }
 }
