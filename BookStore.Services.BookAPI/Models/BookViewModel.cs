@@ -1,4 +1,4 @@
-namespace BookStore.Web.Models
+namespace BookStore.Services.BookAPI.Models
 {
     public class BookViewModel
     {
