@@ -22,11 +22,11 @@ namespace BookStore.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var books = new List<BookDto>();
+            var books = new List<BookViewModel>();
             var response = await _bookService.GetAllBooksAsync<ResponseDto>();
             if (response is not null && response.IsSuccess == true)
             {
-                books = JsonConvert.DeserializeObject<List<BookDto>>(Convert.ToString(response.Result));
+                books = JsonConvert.DeserializeObject<List<BookViewModel>>(Convert.ToString(response.Result));
             }
             ViewData["books"] = books;
             return View(books);
@@ -35,11 +35,11 @@ namespace BookStore.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> GetById(int id)
         {
-            var bookDto = new BookDto();
+            var bookDto = new BookViewModel();
             var response = await _bookService.GetBookByIdAsync<ResponseDto>(id);
             if (response is not null && response.IsSuccess == true)
             {
-                bookDto = JsonConvert.DeserializeObject<BookDto>(Convert.ToString(response.Result));
+                bookDto = JsonConvert.DeserializeObject<BookViewModel>(Convert.ToString(response.Result));
             }
             return View(bookDto);
         }
@@ -64,7 +64,7 @@ namespace BookStore.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(BookDto bookDto)
+        public async Task<IActionResult> Create(BookViewModel bookDto)
         {
             if (ModelState.IsValid)
             {
@@ -78,13 +78,13 @@ namespace BookStore.Web.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Edit(BookDto bookDto)
+        public async Task<IActionResult> Edit(BookViewModel bookDto)
         {
-            var bookDtoResult = new BookDto();
+            var bookDtoResult = new BookViewModel();
             var response = await _bookService.UpdateBookAsync<ResponseDto>(bookDto);
             if (response is not null && response.IsSuccess == true)
             {
-                bookDtoResult = JsonConvert.DeserializeObject<BookDto>(Convert.ToString(response.Result));
+                bookDtoResult = JsonConvert.DeserializeObject<BookViewModel>(Convert.ToString(response.Result));
             }
             return View(bookDtoResult);
         }

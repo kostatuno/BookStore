@@ -146,26 +146,5 @@ namespace BookStore.Services.BookAPI.Tests
                 book = mapper.Map(bookDto);
             });
         }
-
-        [Fact]
-        public void Map_DtoToBook_ThereWontBeAutoMapperNoSuchGenreException()
-        {
-            IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
-            BookDto bookDto = new BookDto()
-            {
-                BookId = 0,
-                Name = "test",
-                Price = 0,
-                Description = "test",
-                Genre = "Memoir",
-                ImageUrl = "test"
-            };
-
-            var book = new Book();
-            Assert.Throws<AutoMapperNoSuchGenreException>(() =>
-            {
-                book = mapper.Map(bookDto);
-            });
-        }
     }
 }

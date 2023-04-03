@@ -9,7 +9,7 @@ namespace BookStore.Web.Services
         {
         }
 
-        public async Task<T> CreateBookAsync<T>(BookDto bookDto)
+        public async Task<T> CreateBookAsync<T>(BookViewModel bookDto)
         {
             return await SendAsync<T>(new ApiRequest()
             {
@@ -50,7 +50,7 @@ namespace BookStore.Web.Services
             });
         }
 
-        public async Task<T> UpdateBookAsync<T>(BookDto bookDto)
+        public async Task<T> UpdateBookAsync<T>(BookViewModel bookDto)
         {
             return await SendAsync<T>(new ApiRequest()
             {

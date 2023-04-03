@@ -6,8 +6,8 @@ namespace BookStore.Web.Services.IServices
     {
         Task<T> GetAllBooksAsync<T>();
         Task<T> GetBookByIdAsync<T>(int id);
-        Task<T> CreateBookAsync<T>(BookDto bookDto);
-        Task<T> UpdateBookAsync<T>(BookDto bookDto);
+        Task<T> CreateBookAsync<T>(BookViewModel bookDto);
+        Task<T> UpdateBookAsync<T>(BookViewModel bookDto);
         Task<T> DeleteBookAsync<T>(int id);
 
     }
